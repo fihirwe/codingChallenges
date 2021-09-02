@@ -1,0 +1,13 @@
+
+public class LargestPalindromeProduct {
+
+	public static void main(String[] args) {
+		
+		int i=100;
+		
+		int rem= Integer.reverse(i);
+		System.out.println(rem);
+
+	}
+
+}

@@ -1,0 +1,27 @@
+
+public class LargestPalindromeProduct {
+
+	public static void main(String[] args) {
+		boolean palindrome=true;
+		
+		String[] nums= String.valueOf(100).split("");
+		int n=0,i;
+		for(i=nums.length-1;i>=0;i--) {
+			if(n!=i) {
+				if(!nums[i].equals(nums[n])) {
+					palindrome=false;
+					break;
+				}
+			}
+			n++;
+		}
+		if(palindrome) {
+			System.out.println("This is a palindrome");
+		}
+		else
+			System.out.println("This is not a palindrome");
+		
+
+	}
+
+}

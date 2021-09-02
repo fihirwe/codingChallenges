@@ -1,0 +1,46 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class LargestPrimeFactor {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		System.out.println("Enter the number you want to calculate the Largest prime number");
+
+		BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
+		int input = Integer.parseInt(reader.readLine());
+
+		ArrayList <Integer> numbers=  new ArrayList<>(); 
+		Boolean[] labels=  new Boolean[input]; 
+		int i;
+		for(i=0; i<input; i++) {
+			numbers.add(i+2);
+		}
+
+		labels[0]=true;
+
+		int a,b,j;
+		b=2;
+		for(a=0;a<input; a++) {
+			b=numbers.get(a);
+			System.out.println(b);
+			if(labels[a]==null) {
+				labels[a]=true;
+				for (j = a+1; j < input; j++) {
+					if(numbers.get(j)%b==0) {
+						labels[j]=false;
+					}
+				}
+				
+			}
+			
+		}
+
+		for(boolean k:labels) {
+			System.out.println(k);
+		}
+	}
+
+}

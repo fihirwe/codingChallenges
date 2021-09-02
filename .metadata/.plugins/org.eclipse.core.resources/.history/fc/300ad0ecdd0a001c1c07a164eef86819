@@ -1,0 +1,32 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class EvenFibonaccinumbers {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		System.out.println("Enter the number you want to calculate the Febonaci");
+
+		BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
+		int input = Integer.parseInt(reader.readLine());
+		
+		int i, sum=0;
+		Integer[]  numbers=new Integer[20];
+		
+		for(i=1; i<input;i++) {
+			numbers[i]=i;
+		}
+		
+		for(int i1=0; i1<input;i1++) {
+			
+			numbers.
+			
+		}
+		
+		
+
+	}
+
+}

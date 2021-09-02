@@ -1,0 +1,58 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class LargestPrimeFactor {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		System.out.println("Enter the number you want to calculate the Largest prime number");
+
+		BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
+		int input = Integer.parseInt(reader.readLine());
+
+		ArrayList <Integer> numbers=  new ArrayList<>(); 
+		Boolean[] labels=  new Boolean[input]; 
+		int i;
+		for(i=0; i<input; i++) {
+			numbers.add(i+2);
+		}
+
+
+
+		int a,b,j;
+		for(a=0;a<input; a++) {
+			b=numbers.get(a);
+			if(labels[a]==null) {
+				labels[a]=true;
+
+				for (j = a+1; j < input; j++) {
+					if(labels[j]==null && numbers.get(j)%b==0) {
+						labels[j]=false;
+					}
+				}
+			}
+		}
+		int factor=0;
+//		for(int k=0; k<input-1;k++) {
+//			if(labels[k]==true) {
+//				factor=numbers.get(k);
+//				System.out.print(" "+factor);
+//			}
+//		}
+//		System.out.println();
+//		System.out.println("Enter the number you want to find the larget prime factor");
+//		input = Integer.parseInt(reader.readLine());
+//		
+		for(int k=0; k<input-1;k++) {
+			if(labels[k]==true) {
+				factor=numbers.get(k);
+				if(input%factor==0) {
+					System.out.print(" "+factor);
+				}
+			}
+		}
+
+	}
+}
