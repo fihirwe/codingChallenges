@@ -7,6 +7,13 @@ import java.util.Iterator;
 public class LargestPrimeFactor {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+//		The prime factors of 13195 are 5, 7, 13 and 29.
+//
+//		What is the largest prime factor of the number 600851475143 ?
+		
+		
+		
 		System.out.println("Enter the number you want to calculate the Largest prime number");
 
 		BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
